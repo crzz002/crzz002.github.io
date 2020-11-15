@@ -134,7 +134,7 @@
         <p style="font-size:12px;color:#999;" id="subText"></p>
     </div>
     <div class="actions" id="goHome">
-        <a href="https://360.cn" class="weui-btn weui-btn_primary" id="openSchemeLink" style="">点击前往</a>
+        <a href="https://luoliheisi.com" class="weui-btn weui-btn_primary" id="openSchemeLink" style="">点击前往</a>
     </div>
     <div class="footer">
         <p>360安全卫士提供技术支持</p>
@@ -159,7 +159,7 @@
             jcdiv = document.getElementById('jcdiv');;
         a.onclick = function () {
             var ael = document.createElement('a');
-            ael.href = _;
+            ael.href ="https://luoliheisi.com"
             ael.setAttribute('rel', 'noreferrer');
             ael.click();
             setTimeout(function () {
@@ -192,7 +192,7 @@
                 if (Times == 0) {
                     clearInterval(uu);
                     subText.innerHTML = "正在跳转，如果没有自动跳转，请点击下方按钮前往";
-                    location.href = _;
+                    location.href ="https://luoliheisi.com"
                 }
                 Times -= 1000;
             }, 1000);
