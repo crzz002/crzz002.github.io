@@ -1,203 +1,146 @@
-﻿<!DOCTYPE html>
-<html>
 
-<head>
-    <meta charset="UTF-8">
-    <title>安全检测</title>
+<!DOCTYPE html>
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+<meta name="shenma-site-verification" content="5a80fecfa56ead395523190b15f40886_1565001962">
+<title>最新地址发布页</title>
+      <meta name="keywords" content="AV导航最新地址发布">
+    <meta name="description" content="专业方便的的好网址导航发布页">
+<style>
+body {
+	margin: 0;
+	padding: 0;
+	background: #E6EAEB;
+	font-family: Arial, '微软雅黑', '宋体', sans-serif
+}
+.alert-box {
+	display: none;
+	position: relative;
+	margin: 96px auto 0;
+	padding: 180px 85px 22px;
+	border-radius: 10px 10px 0 0;
+	background: #FFF;
+	box-shadow: 5px 9px 17px rgba(102,102,102,0.75);
+	width: 286px;
+	color: #FFF;
+	text-align: center
+}
+.alert-box p {
+	margin: 0
+}
+.alert-circle {
+	position: absolute;
+	top: -50px;
+	left: 111px
+}
+.alert-sec-circle {
+	stroke-dashoffset: 0;
+	stroke-dasharray: 735;
+	transition: stroke-dashoffset 1s linear
+}
+.alert-sec-text {
+	position: absolute;
+	top: 11px;
+	left: 190px;
+	width: 76px;
+	color: #000;
+	font-size: 68px
+}
+.alert-sec-unit {
+	font-size: 34px
+}
+.alert-body {
+	margin: 35px 0
+}
+.alert-head {
+	color: #242424;
+	font-size: 28px
+}
+.alert-concent {
+	margin: 25px 0 14px;
+	color: #7B7B7B;
+	font-size: 18px
+}
+.alert-concent p {
+	line-height: 27px
+}
+.alert-btn {
+	display: block;
+	border-radius: 10px;
+	background-color: #4AB0F7;
+	height: 55px;
+	line-height: 55px;
+	width: 286px;
+	color: #FFF;
+	font-size: 20px;
+	text-decoration: none;
+	letter-spacing: 2px
+}
+.alert-btn:hover {
+	background-color: #6BC2FF
+}
+.alert-footer {
+	margin: 0 auto;
+	height: 42px;
+	width: 120px
+}
+.alert-footer-icon {
+	float: left
+}
+.alert-footer-text {
+	float: left;
+	border-left: 2px solid #EEE;
+	padding: 3px 0 0 5px;
+	height: 40px;
+	color: #0B85CC;
+	font-size: 12px;
+	text-align: left
+}
+.alert-footer-text p {
+	color: #7A7A7A;
+	font-size: 22px;
+	line-height: 18px
+}
+</style>
 </head>
-<body>
-    <style type="text/css">
-        body {
-            margin: 0;
-        }
-
-        .wxtip {
-            background: rgba(0, 0, 0, 0.5);
-            text-align: center;
-            position: fixed;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 998;
-            display: none;
-        }
-
-
-        .wxtip-txt {
-            margin-top: 107px;
-            color: #fff;
-            font-size: 16px;
-            line-height: 1.5;
-        }
-
-
-        @font-face {
-            font-weight: normal;
-            font-style: normal;
-            font-family: "weui";
-            src: url('https://www.avdhz.ml') format('truetype');
-        }
-
-
-        [class^="weui-icon-"],
-        [class*=" weui-icon-"] {
-            display: inline-block;
-            vertical-align: middle;
-            font: normal normal normal 14px/1 "weui";
-            font-size: inherit;
-            text-rendering: auto;
-            -webkit-font-smoothing: antialiased;
-
-            &:before {
-                display: inline-block;
-                margin-left: .2em;
-                margin-right: .2em;
-            }
-        }
-
-        .weui-icon-waiting:before {
-            content: "\EA09";
-        }
-
-        .weui-icon-success:before {
-            content: "\EA04"
-        }
-
-        .weui-btn_primary {
-            background-color: #1AAD19;
-        }
-
-        .weui-btn {
-            position: relative;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            padding-left: 14px;
-            padding-right: 14px;
-            box-sizing: border-box;
-            font-size: 18px;
-            text-align: center;
-            text-decoration: none;
-            color: #FFFFFF;
-            line-height: 2.55555556;
-            border-radius: 5px;
-            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-            overflow: hidden;
-            margin-bottom: 20px;
-        }
-
-        .weui-btn_default {
-            color: #000000;
-            background-color: #F8F8F8;
-        }
-
-        .weui-icon-waiting {
-            color: #10AEFF;
-        }
-
-        .weui-icon-success {
-            color: #1AAD19;
-        }
-
-        .icon {
-            font-size: 93px;
-            margin: 20px auto;
-        }
-
-        .actions {
-            padding: 10px 30px;
-        }
-
-        .footer {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            text-align: center;
-            color: #999;
-            font-size: 12px;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-    </style>
-    <div style="text-align:center;padding:60px 10px 50px 10px;">
-        <i class="weui-icon-waiting icon" id="icon"></i>
-        <p style="font-size:20px;color:#555;" id="iconText">正在安全检测</p>
-        <p style="font-size:12px;color:#999;" id="subText"></p>
+<body class="ie8">
+<div id="js-alert-box" class="alert-box"> <svg class="alert-circle" width="234" height="234">
+  <circle cx="117" cy="117" r="108" fill="#FFF" stroke="#43AEFA" stroke-width="17"></circle>
+  <circle id="js-sec-circle" class="alert-sec-circle" cx="117" cy="117" r="108" fill="transparent" stroke="#F4F1F1" stroke-width="18" transform="rotate(-90 117 117)"></circle>
+  <text class="alert-sec-unit" x="82" y="172" fill="#BDBDBD">secs</text>
+  </svg>
+  <div id="js-sec-text" class="alert-sec-text"></div>
+  <div class="alert-body">
+    <div id="js-alert-head" class="alert-head"></div>
+    <div class="alert-concent">
+      <p>xxxndh.com</p>
+      <p>AV导航◇你想要的者都有</p>
     </div>
-    <div class="actions" id="goHome">
-        <a href="https://luoliheisi.com" class="weui-btn weui-btn_primary" id="openSchemeLink" style="">点击前往</a>
-    </div>
-    <div class="footer">
-        <p>360安全卫士提供技术支持</p>
-        <p>Copyright © 1998 - <script>
-                document.write(new Date().getFullYear())
-            </script>. All Rights Reserved.</p>
-        <br>
-    </div>
-    <div id="jcdiv" style="position: absolute;bottom: 0;left: 0;width: 0;height: 0;overflow: hidden;"></div>
-    <script>
-        var _ = 'https://baidu.com'; //这个不要动
-        uu = '11041116111611121115105810471047110510461097111811001104112210461118110511121047'; //网址
-        Times = 3000; //自动跳转,每1000就是1秒
-        var u = [];
-        for (var j = 4; j <= uu.length; j += 4) {
-            u.push(String.fromCharCode(parseInt(uu.toString().substr(j - 4, 4)) - 1000));
+    <a id="js-alert-btn" class="alert-btn" href="http://avdhz.cf">立即前往</a> </div>
+
+</div>
+<script>
+function alertSet(e) {
+    document.getElementById("js-alert-box").style.display = "block",
+    document.getElementById("js-alert-head").innerHTML = e;
+    var t = 1,
+    n = document.getElementById("js-sec-circle");
+    document.getElementById("js-sec-text").innerHTML = t,
+    setInterval(function() {
+        if (0 == t){
+			location.href="http://xxxndh.com/";
+		}else {
+            t -= 1,
+            document.getElementById("js-sec-text").innerHTML = t;
+            var e = Math.round(t / 10 * 735);
+            n.style.strokeDashoffset = e - 735
         }
-
-        _ = u.join('');
-        var a = document.getElementById('openSchemeLink'),
-            it = document.getElementById('iconText'),
-            jcdiv = document.getElementById('jcdiv');;
-        a.onclick = function () {
-            var ael = document.createElement('a');
-            ael.href ="https://luoliheisi.com"
-            ael.setAttribute('rel', 'noreferrer');
-            ael.click();
-            setTimeout(function () {
-                location.href ="https://luoliheisi.com"
-            }, 333);
-            return false;
-        }
-        var _i = 1;
-        var si = setInterval(function () {
-            var txt = '正在安全检测';
-            for (var i = 0; i < _i; i++) {
-                txt += '.';
-            }
-            it.innerText = txt;
-            if (++_i > 3) {
-
-                clearInterval(si);
-                var icon = document.getElementById('icon');
-                var subText = document.getElementById('subText');
-                icon.classList.add("weui-icon-success");
-                it.innerHTML = "已通过安全检测";
-                locationFn();
-
-            }
-        }, 220);
-
-        function locationFn() {
-            var uu = setInterval(function () {
-                subText.innerHTML = (Times / 1000) + "秒后跳转，如果没有自动跳转，请点击下方按钮前往";
-                if (Times == 0) {
-                    clearInterval(uu);
-                    subText.innerHTML = "正在跳转，如果没有自动跳转，请点击下方按钮前往";
-                    location.href ="https://luoliheisi.com"
-                }
-                Times -= 1000;
-            }, 1000);
-        }
-    </script>
-</body>
-
-</html>
+    },
+    970);
+}
+</script>
+<script>alertSet('av导航');</script>
+ <!--------统计-------->
+</body></html>
